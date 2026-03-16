@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Globe, Code2, GitBranch, Palette, Server, TestTube } from "lucide-react";
+import { brandEase } from "@/lib/motion";
 
-const ease = [0.23, 1, 0.32, 1];
+const ease = brandEase;
 
 interface Skill {
   name: string;

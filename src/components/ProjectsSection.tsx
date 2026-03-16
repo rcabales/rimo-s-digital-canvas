@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { getLatestProjects } from "@/data/content";
+import { brandEase } from "@/lib/motion";
 
-const ease = [0.23, 1, 0.32, 1];
+const ease = brandEase;
 
 const ProjectsSection = () => {
   const projects = getLatestProjects(6);
