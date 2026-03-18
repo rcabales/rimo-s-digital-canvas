@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { brandEase } from "@/lib/motion";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const ease = brandEase;
 
