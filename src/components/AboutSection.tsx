@@ -23,16 +23,17 @@ const AboutSection = () => {
               transition={{ duration: 0.5, ease }}
               className="flex justify-center md:justify-start"
             >
-              <Avatar className="h-48 w-48 md:h-56 md:w-56 ring-4 ring-border shadow-lg">
-                <AvatarImage
+              <div className="h-48 w-48 md:h-56 md:w-56 rounded-full ring-4 ring-border shadow-lg overflow-hidden bg-muted flex items-center justify-center">
+                <img
                   src="/placeholder.svg"
                   alt="Rimo Cabales headshot"
-                  className="object-cover"
+                  className="h-full w-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.innerHTML = '<span class="text-4xl font-semibold text-muted-foreground">RC</span>';
+                  }}
                 />
-                <AvatarFallback className="text-4xl font-semibold bg-muted text-muted-foreground">
-                  RC
-                </AvatarFallback>
-              </Avatar>
+              </div>
             </motion.div>
 
             {/* Content */}
