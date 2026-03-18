@@ -31,13 +31,13 @@ const BlogSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08, ease }}
               whileHover={{ y: -5 }}
-              className="transition-shadow hover:shadow-lift"
+              className="transition-shadow hover:shadow-lift h-full"
             >
               <Link
                 to={`/blog/${post.slug}`}
-                className="group block bg-background rounded-2xl border border-border overflow-hidden"
+                className="group flex flex-col h-full bg-background rounded-2xl border border-border overflow-hidden"
               >
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="font-mono text-xs text-muted-foreground">{post.readTime} read</span>
                     <span className="text-border">·</span>
@@ -54,7 +54,7 @@ const BlogSection = () => {
                       className="text-muted-foreground group-hover:text-primary transition-colors mt-1 flex-shrink-0 ml-2"
                     />
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{post.synopsis}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">{post.synopsis}</p>
                 </div>
               </Link>
             </motion.div>
