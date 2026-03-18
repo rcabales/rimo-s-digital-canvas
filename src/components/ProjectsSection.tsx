@@ -31,18 +31,18 @@ const ProjectsSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08, ease }}
               whileHover={{ y: -5 }}
-              className="transition-shadow hover:shadow-lift"
+              className="transition-shadow hover:shadow-lift h-full"
             >
               <Link
                 to={`/projects/${project.slug}`}
-                className="group block bg-card rounded-2xl border border-border overflow-hidden"
+                className="group flex flex-col h-full bg-card rounded-2xl border border-border overflow-hidden"
               >
                 <div className="aspect-[16/10] bg-accent overflow-hidden">
                   <div className="w-full h-full bg-gradient-to-br from-accent to-border flex items-center justify-center">
                     <span className="font-mono text-xs text-muted-foreground">{project.tags[0]}</span>
                   </div>
                 </div>
-                <div className="p-5">
+                <div className="p-5 flex flex-col flex-1">
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
                       {project.title}
@@ -52,7 +52,7 @@ const ProjectsSection = () => {
                       className="text-muted-foreground group-hover:text-primary transition-colors mt-1 flex-shrink-0 ml-2"
                     />
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{project.synopsis}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">{project.synopsis}</p>
                   <div className="flex flex-wrap gap-2 mt-4">
                     {project.tags.map((tag) => (
                       <span key={tag} className="font-mono text-xs text-muted-foreground bg-accent px-2 py-1 rounded-md">
