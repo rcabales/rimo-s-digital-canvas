@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { brandEase } from "@/lib/motion";
 
-const ease = brandEase;
+const ease = brandEase; // refresh
 
 const AboutSection = () => {
   return (
