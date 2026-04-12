@@ -63,7 +63,7 @@ const SkillsSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.05, ease }}
                 whileHover={{ y: -4 }}
-                className="col-span-2 md:col-span-3 lg:col-span-4 row-span-2 bg-background rounded-2xl border border-border p-6 flex flex-col justify-between min-h-[160px] cursor-default transition-shadow hover:shadow-lift"
+                className="col-span-1 md:col-span-2 lg:col-span-2 row-span-2 bg-background rounded-2xl border border-border p-6 flex flex-col justify-between min-h-[160px] cursor-default transition-shadow hover:shadow-lift"
               >
                 <div className="text-foreground mb-4">{skill.icon}</div>
                 <div>
