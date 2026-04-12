@@ -13,7 +13,7 @@ const AboutSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease }}
         >
-          <p className="label-meta mb-4">About</p>
+          {/* <p className="label-meta mb-4">About</p> */}
           <div className="grid md:grid-cols-[auto_1fr] gap-12 md:gap-16 items-start">
             {/* Headshot */}
             <motion.div
@@ -25,9 +25,9 @@ const AboutSection = () => {
             >
               <div className="h-48 w-48 md:h-56 md:w-56 rounded-full ring-4 ring-border shadow-lg overflow-hidden bg-muted flex items-center justify-center">
                 <img
-                  src="/placeholder.svg"
+                  src="/rc_headshot.jpg"
                   alt="Rimo Cabales headshot"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-left scale-110"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<span class="text-4xl font-semibold text-muted-foreground">RC</span>';
