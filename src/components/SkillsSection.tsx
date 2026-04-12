@@ -17,11 +17,11 @@ const skills: Skill[] = [
   { name: "PHP", years: "12+", icon: <Server size={28} />, primary: true },
   { name: "JavaScript", years: "12+", icon: <Code2 size={28} />, primary: true },
   { name: "CSS", years: "12+", icon: <Palette size={28} />, primary: true },
+  { name: "Tailwind", years: "5+", icon: <Palette size={28} />, primary: true },
   { name: "GitHub", years: "10+", icon: <GitBranch size={28} />, primary: true },
   { name: "React", years: "6+", icon: <Code2 size={20} />, primary: false },
   { name: "Vue", years: "4+", icon: <Code2 size={20} />, primary: false },
   { name: "Next.js", years: "4+", icon: <Globe size={20} />, primary: false },
-  { name: "Tailwind", years: "5+", icon: <Palette size={20} />, primary: false },
   { name: "Twig", years: "6+", icon: <Code2 size={20} />, primary: false },
   { name: "Cypress", years: "3+", icon: <TestTube size={20} />, primary: false },
 ];
@@ -63,7 +63,7 @@ const SkillsSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.05, ease }}
                 whileHover={{ y: -4 }}
-                className="col-span-2 md:col-span-3 lg:col-span-4 row-span-2 bg-background rounded-2xl border border-border p-6 flex flex-col justify-between min-h-[160px] cursor-default transition-shadow hover:shadow-lift"
+                className="col-span-1 md:col-span-2 lg:col-span-2 row-span-2 bg-background rounded-2xl border border-border p-6 flex flex-col justify-between min-h-[160px] cursor-default transition-shadow hover:shadow-lift"
               >
                 <div className="text-foreground mb-4">{skill.icon}</div>
                 <div>
