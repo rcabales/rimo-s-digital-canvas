@@ -1,14 +1,21 @@
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
-import { getProjectBySlug } from "@/data/content";
+import { getProjectBySlug, getAdjacentProjects } from "@/data/content";
 import { brandEase } from "@/lib/motion";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import PrevNextNav from "@/components/PrevNextNav";
 
 const ProjectPage = () => {
   const { slug } = useParams<{ slug: string }>();
   const project = slug ? getProjectBySlug(slug) : undefined;
+  const adjacent = slug ? getAdjacentProjects(slug) : null;
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [slug]);
 
   if (!project) {
     return (
@@ -104,6 +111,15 @@ const ProjectPage = () => {
               });
             })()}
           </article>
+          {adjacent && (
+            <PrevNextNav
+              basePath="/projects"
+              prev={adjacent.prev}
+              next={adjacent.next}
+              prevLabel="Previous project"
+              nextLabel="Next project"
+            />
+          )}
         </motion.div>
       </main>
       <SiteFooter />

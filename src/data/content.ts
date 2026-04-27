@@ -190,3 +190,26 @@ export function getProjectBySlug(slug: string): Project | undefined {
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
 }
+
+function sortedByDateDesc<T extends { date: string }>(items: T[]): T[] {
+  return [...items].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+export function getAdjacentProjects(slug: string): { prev: Project; next: Project } | null {
+  const sorted = sortedByDateDesc(projects);
+  const idx = sorted.findIndex((p) => p.slug === slug);
+  if (idx === -1 || sorted.length < 2) return null;
+  const prev = sorted[(idx - 1 + sorted.length) % sorted.length];
+  const next = sorted[(idx + 1) % sorted.length];
+  return { prev, next };
+}
+
+export function getAdjacentBlogPosts(slug: string): { prev: BlogPost; next: BlogPost } | null {
+  const sorted = sortedByDateDesc(blogPosts);
+  const idx = sorted.findIndex((p) => p.slug === slug);
+  if (idx === -1 || sorted.length < 2) return null;
+  const prev = sorted[(idx - 1 + sorted.length) % sorted.length];
+  const next = sorted[(idx + 1) % sorted.length];
+  return { prev, next };
+}
+
