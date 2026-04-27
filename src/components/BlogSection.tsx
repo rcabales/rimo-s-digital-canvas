@@ -37,6 +37,16 @@ const BlogSection = () => {
                 to={`/blog/${post.slug}`}
                 className="group flex flex-col h-full bg-background rounded-2xl border border-border overflow-hidden"
               >
+                <div className="aspect-[16/10] bg-accent overflow-hidden">
+                  <img
+                    src={post.thumbnail}
+                    alt={post.title}
+                    loading="lazy"
+                    width={1280}
+                    height={800}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
                 <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="font-mono text-xs text-muted-foreground">{post.readTime} read</span>

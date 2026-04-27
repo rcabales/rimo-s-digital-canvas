@@ -38,9 +38,14 @@ const ProjectsSection = () => {
                 className="group flex flex-col h-full bg-card rounded-2xl border border-border overflow-hidden"
               >
                 <div className="aspect-[16/10] bg-accent overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-accent to-border flex items-center justify-center">
-                    <span className="font-mono text-xs text-muted-foreground">{project.tags[0]}</span>
-                  </div>
+                  <img
+                    src={project.thumbnail}
+                    alt={project.title}
+                    loading="lazy"
+                    width={1280}
+                    height={800}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
                 <div className="p-5 flex flex-col flex-1">
                   <div className="flex items-start justify-between mb-2">
