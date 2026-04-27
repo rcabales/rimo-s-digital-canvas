@@ -61,24 +61,45 @@ const BlogPostPage = () => {
           </div>
 
           <article className="prose prose-slate max-w-[65ch] prose-headings:tracking-tight prose-headings:font-semibold">
-            {post.content.split("\n\n").map((paragraph, i) => {
-              if (paragraph.startsWith("### ")) {
-                return <h3 key={i}>{paragraph.replace("### ", "")}</h3>;
-              }
-              if (paragraph.startsWith("## ")) {
-                return <h2 key={i}>{paragraph.replace("## ", "")}</h2>;
-              }
-              if (paragraph.startsWith("- ")) {
-                return (
-                  <ul key={i}>
-                    {paragraph.split("\n").map((item, j) => (
-                      <li key={j}>{item.replace("- ", "")}</li>
-                    ))}
-                  </ul>
-                );
-              }
-              return <p key={i}>{paragraph}</p>;
-            })}
+            {(() => {
+              const blocks = post.content.split("\n\n");
+              const firstParaIdx = blocks.findIndex(
+                (b) => !b.startsWith("#") && !b.startsWith("- ")
+              );
+              return blocks.flatMap((paragraph, i) => {
+                const nodes: React.ReactNode[] = [];
+                if (paragraph.startsWith("### ")) {
+                  nodes.push(<h3 key={i}>{paragraph.replace("### ", "")}</h3>);
+                } else if (paragraph.startsWith("## ")) {
+                  nodes.push(<h2 key={i}>{paragraph.replace("## ", "")}</h2>);
+                } else if (paragraph.startsWith("- ")) {
+                  nodes.push(
+                    <ul key={i}>
+                      {paragraph.split("\n").map((item, j) => (
+                        <li key={j}>{item.replace("- ", "")}</li>
+                      ))}
+                    </ul>
+                  );
+                } else {
+                  nodes.push(<p key={i}>{paragraph}</p>);
+                }
+                if (i === firstParaIdx) {
+                  nodes.push(
+                    <figure key={`fig-${i}`} className="not-prose my-8">
+                      <img
+                        src={post.inlineImage}
+                        alt=""
+                        loading="lazy"
+                        width={1280}
+                        height={640}
+                        className="w-full rounded-2xl border border-border"
+                      />
+                    </figure>
+                  );
+                }
+                return nodes;
+              });
+            })()}
           </article>
         </motion.div>
       </main>
