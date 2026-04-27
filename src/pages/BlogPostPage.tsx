@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
@@ -11,6 +12,10 @@ const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getBlogPostBySlug(slug) : undefined;
   const adjacent = slug ? getAdjacentBlogPosts(slug) : null;
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [slug]);
 
   if (!post) {
     return (
