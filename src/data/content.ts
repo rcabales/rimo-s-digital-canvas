@@ -1,3 +1,16 @@
+import projectCms from "@/assets/project-cms.jpg";
+import projectFintech from "@/assets/project-fintech.jpg";
+import projectEcommerce from "@/assets/project-ecommerce.jpg";
+import projectDesignSystem from "@/assets/project-design-system.jpg";
+import projectHealthcare from "@/assets/project-healthcare.jpg";
+import projectPublishing from "@/assets/project-publishing.jpg";
+import blogHeadlessWp from "@/assets/blog-headless-wp.jpg";
+import blogTypescript from "@/assets/blog-typescript.jpg";
+import blogCss from "@/assets/blog-css.jpg";
+import blogRemote from "@/assets/blog-remote.jpg";
+import blogPerformance from "@/assets/blog-performance.jpg";
+import blogMigration from "@/assets/blog-migration.jpg";
+
 export interface Project {
   slug: string;
   title: string;
