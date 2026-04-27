@@ -10,6 +10,7 @@ import PrevNextNav from "@/components/PrevNextNav";
 const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getBlogPostBySlug(slug) : undefined;
+  const adjacent = slug ? getAdjacentBlogPosts(slug) : null;
 
   if (!post) {
     return (
@@ -102,6 +103,15 @@ const BlogPostPage = () => {
               });
             })()}
           </article>
+          {adjacent && (
+            <PrevNextNav
+              basePath="/blog"
+              prev={adjacent.prev}
+              next={adjacent.next}
+              prevLabel="Previous post"
+              nextLabel="Next post"
+            />
+          )}
         </motion.div>
       </main>
       <SiteFooter />

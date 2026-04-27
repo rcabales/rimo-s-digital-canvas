@@ -10,6 +10,7 @@ import PrevNextNav from "@/components/PrevNextNav";
 const ProjectPage = () => {
   const { slug } = useParams<{ slug: string }>();
   const project = slug ? getProjectBySlug(slug) : undefined;
+  const adjacent = slug ? getAdjacentProjects(slug) : null;
 
   if (!project) {
     return (
@@ -105,6 +106,15 @@ const ProjectPage = () => {
               });
             })()}
           </article>
+          {adjacent && (
+            <PrevNextNav
+              basePath="/projects"
+              prev={adjacent.prev}
+              next={adjacent.next}
+              prevLabel="Previous project"
+              nextLabel="Next project"
+            />
+          )}
         </motion.div>
       </main>
       <SiteFooter />
