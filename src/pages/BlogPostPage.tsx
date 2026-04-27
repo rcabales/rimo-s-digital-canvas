@@ -1,10 +1,11 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
-import { getBlogPostBySlug } from "@/data/content";
+import { getBlogPostBySlug, getAdjacentBlogPosts } from "@/data/content";
 import { brandEase } from "@/lib/motion";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import PrevNextNav from "@/components/PrevNextNav";
 
 const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
