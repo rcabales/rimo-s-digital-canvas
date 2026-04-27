@@ -48,7 +48,17 @@ const BlogPostPage = () => {
           </div>
 
           <h1 className="text-4xl md:text-5xl tracking-tighter mb-4">{post.title}</h1>
-          <p className="text-muted-foreground mb-10">{post.synopsis}</p>
+          <p className="text-muted-foreground mb-8">{post.synopsis}</p>
+
+          <div className="aspect-[16/9] rounded-2xl overflow-hidden border border-border mb-10 bg-accent">
+            <img
+              src={post.thumbnail}
+              alt={post.title}
+              width={1280}
+              height={800}
+              className="w-full h-full object-cover"
+            />
+          </div>
 
           <article className="prose prose-slate max-w-[65ch] prose-headings:tracking-tight prose-headings:font-semibold">
             {post.content.split("\n\n").map((paragraph, i) => {

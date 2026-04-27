@@ -49,9 +49,19 @@ const ProjectPage = () => {
 
           <h1 className="text-4xl md:text-5xl tracking-tighter mb-4">{project.title}</h1>
           <p className="text-muted-foreground mb-2">{project.synopsis}</p>
-          <p className="font-mono text-xs text-muted-foreground mb-10">
+          <p className="font-mono text-xs text-muted-foreground mb-8">
             {new Date(project.date).toLocaleDateString("en-US", { month: "long", year: "numeric" })}
           </p>
+
+          <div className="aspect-[16/9] rounded-2xl overflow-hidden border border-border mb-10 bg-accent">
+            <img
+              src={project.thumbnail}
+              alt={project.title}
+              width={1280}
+              height={800}
+              className="w-full h-full object-cover"
+            />
+          </div>
 
           <article className="prose prose-slate max-w-[65ch] prose-headings:tracking-tight prose-headings:font-semibold">
             {project.content.split("\n\n").map((paragraph, i) => {
