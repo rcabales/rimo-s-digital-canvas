@@ -1,17 +1,54 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { z } from "zod";
 import { brandEase } from "@/lib/motion";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 
 const ease = brandEase;
 
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be under 100 characters"),
+  email: z.string().trim().email("Please enter a valid email").max(255, "Email must be under 255 characters"),
+  message: z.string().trim().min(1, "Message is required").max(2000, "Message must be under 2000 characters"),
+});
+
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Placeholder – would connect to a backend
-    alert("Thanks for reaching out! I'll get back to you soon.");
+
+    const result = contactSchema.safeParse(formData);
+    if (!result.success) {
+      toast({
+        title: "Please check your entries",
+        description: result.error.issues[0].message,
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setSubmitting(true);
+    const { name, email, message } = result.data;
+    const { error } = await supabase.from("contact_submissions").insert([{ name, email, message }]);
+    setSubmitting(false);
+
+    if (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again in a moment.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    toast({
+      title: "Thanks for reaching out!",
+      description: "Your message has been received. I'll get back to you soon.",
+    });
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -82,9 +119,10 @@ const ContactSection = () => {
             </div>
             <button
               type="submit"
-              className="h-12 px-8 rounded-full bg-foreground text-card inline-flex items-center gap-2 text-sm font-medium hover:bg-primary transition-colors"
+              disabled={submitting}
+              className="h-12 px-8 rounded-full bg-foreground text-card inline-flex items-center gap-2 text-sm font-medium hover:bg-primary transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Send Message <Send size={16} />
+              {submitting ? "Sending…" : "Send Message"} <Send size={16} />
             </button>
           </motion.form>
 
