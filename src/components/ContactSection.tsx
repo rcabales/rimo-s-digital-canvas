@@ -119,9 +119,10 @@ const ContactSection = () => {
             </div>
             <button
               type="submit"
-              className="h-12 px-8 rounded-full bg-foreground text-card inline-flex items-center gap-2 text-sm font-medium hover:bg-primary transition-colors"
+              disabled={submitting}
+              className="h-12 px-8 rounded-full bg-foreground text-card inline-flex items-center gap-2 text-sm font-medium hover:bg-primary transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Send Message <Send size={16} />
+              {submitting ? "Sending…" : "Send Message"} <Send size={16} />
             </button>
           </motion.form>
 
