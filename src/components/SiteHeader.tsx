@@ -94,16 +94,16 @@ const SiteHeader = () => {
               {navLinks.map((link) => (
                 <a
                   key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
+                  href={isHome ? `#${link.href}` : `/#${link.href}`}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className="text-sm text-muted-foreground hover:text-foreground py-2"
                 >
                   {link.label}
                 </a>
               ))}
               <a
-                href="#contact"
-                onClick={() => setMobileOpen(false)}
+                href={isHome ? "#contact" : "/#contact"}
+                onClick={(e) => handleNavClick(e, "contact")}
                 className="h-10 px-6 rounded-full bg-foreground text-card inline-flex items-center justify-center text-sm font-medium mt-2"
               >
                 Get in Touch
