@@ -55,18 +55,18 @@ const SiteHeader = () => {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={isHome ? `#${link.href}` : `/#${link.href}`}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="#contact"
+            href={isHome ? "#contact" : "/#contact"}
+            onClick={(e) => handleNavClick(e, "contact")}
             className="h-10 px-6 rounded-full bg-foreground text-card inline-flex items-center text-sm font-medium hover:bg-primary transition-colors"
           >
-            Get in Touch
-          </a>
         </nav>
 
         {/* Mobile toggle */}
