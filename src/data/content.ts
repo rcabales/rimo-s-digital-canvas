@@ -23,6 +23,22 @@ import inlineRemote from "@/assets/inline-remote.jpg";
 import inlinePerformance from "@/assets/inline-performance.jpg";
 import inlineMigration from "@/assets/inline-migration.jpg";
 
+// Project markdown content
+import contentEnterpriseCms from "@/content/projects/enterprise-cms-platform.md?raw";
+import contentFintech from "@/content/projects/fintech-dashboard.md?raw";
+import contentEcommerce from "@/content/projects/ecommerce-migration.md?raw";
+import contentDesignSystem from "@/content/projects/design-system-library.md?raw";
+import contentHealthcare from "@/content/projects/healthcare-portal.md?raw";
+import contentPublishing from "@/content/projects/media-publishing-platform.md?raw";
+
+// Blog markdown content
+import contentHeadlessWp from "@/content/blog/headless-wordpress-at-scale.md?raw";
+import contentTypescript from "@/content/blog/typescript-patterns-for-seniors.md?raw";
+import contentCss from "@/content/blog/css-architecture-2025.md?raw";
+import contentRemote from "@/content/blog/remote-work-engineering-culture.md?raw";
+import contentPerformance from "@/content/blog/performance-budgets-that-work.md?raw";
+import contentMigration from "@/content/blog/wordpress-to-react-migration.md?raw";
+
 export interface Project {
   slug: string;
   title: string;
