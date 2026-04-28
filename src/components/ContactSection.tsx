@@ -32,7 +32,8 @@ const ContactSection = () => {
     }
 
     setSubmitting(true);
-    const { error } = await supabase.from("contact_submissions").insert([result.data]);
+    const { name, email, message } = result.data;
+    const { error } = await supabase.from("contact_submissions").insert([{ name, email, message }]);
     setSubmitting(false);
 
     if (error) {
