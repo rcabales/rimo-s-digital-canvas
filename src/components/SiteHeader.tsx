@@ -1,19 +1,35 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Blog", href: "#blog" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "about" },
+  { label: "Skills", href: "skills" },
+  { label: "Projects", href: "projects" },
+  { label: "Blog", href: "blog" },
+  { label: "Contact", href: "contact" },
 ];
 
 const SiteHeader = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHome = location.pathname === "/";
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    setMobileOpen(false);
+    if (isHome) {
+      e.preventDefault();
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.replaceState(null, "", `#${id}`);
+    } else {
+      e.preventDefault();
+      navigate(`/#${id}`);
+    }
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -39,14 +55,16 @@ const SiteHeader = () => {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={isHome ? `#${link.href}` : `/#${link.href}`}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="#contact"
+            href={isHome ? "#contact" : "/#contact"}
+            onClick={(e) => handleNavClick(e, "contact")}
             className="h-10 px-6 rounded-full bg-foreground text-card inline-flex items-center text-sm font-medium hover:bg-primary transition-colors"
           >
             Get in Touch
@@ -76,16 +94,16 @@ const SiteHeader = () => {
               {navLinks.map((link) => (
                 <a
                   key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
+                  href={isHome ? `#${link.href}` : `/#${link.href}`}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className="text-sm text-muted-foreground hover:text-foreground py-2"
                 >
                   {link.label}
                 </a>
               ))}
               <a
-                href="#contact"
-                onClick={() => setMobileOpen(false)}
+                href={isHome ? "#contact" : "/#contact"}
+                onClick={(e) => handleNavClick(e, "contact")}
                 className="h-10 px-6 rounded-full bg-foreground text-card inline-flex items-center justify-center text-sm font-medium mt-2"
               >
                 Get in Touch
