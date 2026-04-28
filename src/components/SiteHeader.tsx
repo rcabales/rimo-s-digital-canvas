@@ -67,6 +67,8 @@ const SiteHeader = () => {
             onClick={(e) => handleNavClick(e, "contact")}
             className="h-10 px-6 rounded-full bg-foreground text-card inline-flex items-center text-sm font-medium hover:bg-primary transition-colors"
           >
+            Get in Touch
+          </a>
         </nav>
 
         {/* Mobile toggle */}
