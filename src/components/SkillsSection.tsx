@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Globe, Code2, GitBranch, Palette, Server, TestTube } from "lucide-react";
+import { Globe, Code2, GitBranch, Palette, Server, TestTube, Sparkles } from "lucide-react";
 import { brandEase } from "@/lib/motion";
 
 const ease = brandEase;
@@ -24,6 +24,7 @@ const skills: Skill[] = [
   { name: "Next.js", years: "4+", icon: <Globe size={20} />, primary: false },
   { name: "Twig", years: "6+", icon: <Code2 size={20} />, primary: false },
   { name: "Cypress", years: "3+", icon: <TestTube size={20} />, primary: false },
+  { name: "Claude AI", years: "2+", icon: <Sparkles size={20} />, primary: false },
 ];
 
 const SkillsSection = () => {
