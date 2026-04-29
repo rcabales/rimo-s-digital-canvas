@@ -7,6 +7,7 @@ import { brandEase } from "@/lib/motion";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import PrevNextNav from "@/components/PrevNextNav";
+import MarkdownContent from "@/components/MarkdownContent";
 
 const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
