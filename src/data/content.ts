@@ -30,6 +30,7 @@ import contentEcommerce from "@/content/projects/ecommerce-migration.md?raw";
 import contentDesignSystem from "@/content/projects/design-system-library.md?raw";
 import contentHealthcare from "@/content/projects/healthcare-portal.md?raw";
 import contentPublishing from "@/content/projects/media-publishing-platform.md?raw";
+import bsiGroup from "@/content/projects/bsigroup.md?raw";
 
 // Blog markdown content
 import contentHeadlessWp from "@/content/blog/headless-wordpress-at-scale.md?raw";
@@ -64,14 +65,14 @@ export interface BlogPost {
 
 export const projects: Project[] = [
   {
-    slug: "enterprise-cms-platform",
-    title: "Enterprise CMS Platform",
-    synopsis: "A scalable headless CMS powering 200+ microsites for a Fortune 500 client.",
+    slug: "bsi-group",
+    title: "BSI Group",
+    synopsis: "Redesign and rebuild of the BSI website, building components integrated into a bespoke CMS with a focus on accessibility and lean JavaScript",
     thumbnail: projectCms,
     inlineImage: inlineCms,
     date: "2025-11-15",
-    tags: ["WordPress", "PHP", "React", "REST API"],
-    content: contentEnterpriseCms,
+    tags: ["JavaScript"],
+    content: bsiGroup,
   },
   {
     slug: "fintech-dashboard",

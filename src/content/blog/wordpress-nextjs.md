@@ -1,5 +1,3 @@
-# WordPress + Next.js: How I Build Websites That Are Fast, Flexible, and Easy for You to Manage
-
 Let me paint you a picture.
 
 You've got a WordPress website. It works. Your team can log in, write content, upload images, tick the boxes. But on the front end — the bit your visitors actually see — it feels a bit... vanilla. Performance isn't great. The design is boxed in by the theme. Every time you want something slightly custom, it's another plugin, another conflict, another Tuesday afternoon lost to troubleshooting.
