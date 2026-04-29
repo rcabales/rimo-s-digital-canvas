@@ -33,6 +33,7 @@ import contentPublishing from "@/content/projects/media-publishing-platform.md?r
 
 // Blog markdown content
 import contentHeadlessWp from "@/content/blog/headless-wordpress-at-scale.md?raw";
+import contentWordpressNextjs from "@/content/blog/wordpress-nextjs.md?raw";
 import contentTypescript from "@/content/blog/typescript-patterns-for-seniors.md?raw";
 import contentCss from "@/content/blog/css-architecture-2025.md?raw";
 import contentRemote from "@/content/blog/remote-work-engineering-culture.md?raw";
@@ -125,6 +126,16 @@ export const projects: Project[] = [
 ];
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "wordpress-nextjs",
+    title: "WordPress + Next.js: How I Build Websites That Are Fast, Flexible, and Easy for You to Manage",
+    synopsis: "How WordPress and Next.js work together to give your business a faster, better-looking website — without the headaches.",
+    thumbnail: blogHeadlessWp,
+    inlineImage: inlineHeadlessWp,
+    date: "2025-12-01",
+    readTime: "8 min",
+    content: contentWordpressNextjs,
+  },
   {
     slug: "headless-wordpress-at-scale",
     title: "Headless WordPress at Scale: Lessons from 200+ Sites",
