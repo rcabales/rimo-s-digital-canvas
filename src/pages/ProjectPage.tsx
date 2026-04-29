@@ -74,7 +74,6 @@ const ProjectPage = () => {
           <article className="prose prose-slate max-w-[65ch] prose-headings:tracking-tight prose-headings:font-semibold">
             <MarkdownContent
               content={project.content}
-              inlineImage={project.inlineImage}
             />
           </article>
           {adjacent && (

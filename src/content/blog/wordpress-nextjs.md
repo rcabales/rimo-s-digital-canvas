@@ -8,8 +8,6 @@ This is the problem I solve with a setup called **headless WordPress**, paired w
 
 No new tools to learn. No scary interfaces. Just a better website under the hood.
 
----
-
 ## So What Does "Headless" Actually Mean?
 
 Great question, and no, it's not as grim as it sounds.

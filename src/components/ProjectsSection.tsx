@@ -37,14 +37,14 @@ const ProjectsSection = () => {
                 to={`/projects/${project.slug}`}
                 className="group flex flex-col h-full bg-card rounded-2xl border border-border overflow-hidden"
               >
-                <div className="aspect-[16/10] bg-accent overflow-hidden">
+                <div className={`aspect-[16/10] ${project.bg} overflow-hidden`}>
                   <img
                     src={project.thumbnail}
                     alt={project.title}
                     loading="lazy"
                     width={1280}
                     height={800}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-contain scale-90 transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-5 flex flex-col flex-1">
