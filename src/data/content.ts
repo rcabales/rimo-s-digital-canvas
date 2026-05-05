@@ -2,9 +2,6 @@ import aailaFoodsLogo from "@/assets/content/projects/aailafoods/aailafoods.png"
 
 import hassanNurLogo from "@/assets/content/projects/hassannur/hassannur.png";
 
-import hassanNur1 from "@/assets/content/projects/hassannur/hassannur1.png";
-import hassanNur2 from "@/assets/content/projects/hassannur/hassannur2.png";
-
 import paceCentreLogo from "@/assets/content/projects/pacecentre/pacecentre.svg";
 
 import bsiLogo from "@/assets/content/projects/bsi/bsi-logo.svg";
@@ -30,7 +27,6 @@ export interface Project {
   title: string;
   synopsis: string;
   thumbnail: string;
-  date: string;
   tags: string[];
   content: string;
   bg: string;
@@ -52,7 +48,6 @@ export const projects: Project[] = [
     title: "Hassan Nur",
     synopsis: "A look at the portfolio website I built solo for London-based 3D artist Hassan Nur, using React.js and Sanity.io to deliver a fast, media-rich showcase of his work.",
     thumbnail: hassanNurLogo,
-    date: "2025-11-15",
     tags: ["React", "Sanity.io", "JavaScript"],
     content: hassanNur,
     bg: "bg-slate-100",
@@ -62,8 +57,7 @@ export const projects: Project[] = [
     title: "BSI Group",
     synopsis: "Redesign and rebuild of the BSI website, building components integrated into a bespoke CMS with a focus on accessibility and lean JavaScript",
     thumbnail: bsiLogo,
-    date: "2025-11-15",
-    tags: ["JavaScript"],
+    tags: ["HTML", "JavaScript", "CSS"],
     content: bsiGroup,
     bg: "bg-slate-100",
   },
@@ -72,8 +66,7 @@ export const projects: Project[] = [
     title: "Dezeen",
     synopsis: "A leading architecture and design publication commissioned a ground-up website rebuild",
     thumbnail: dezeenLogo,
-    date: "2025-11-15",
-    tags: ["Wordpress", "JavaScript"],
+    tags: ["Wordpress", "PHP", "JavaScript"],
     content: dezeen,
     bg: "bg-slate-100",
   },
@@ -82,7 +75,6 @@ export const projects: Project[] = [
     title: "Buster and Punch",
     synopsis: "A look at the Buster + Punch website refresh project, covering the brand's background and my role in developing the blog's front-end and back-end within a WordPress and WooCommerce stack.",
     thumbnail: busterAndPunchLogo,
-    date: "2025-11-15",
     tags: ["Wordpress", "WooCommerce", "JavaScript"],
     content: busterAndPunch,
     bg: "bg-slate-700",
@@ -92,7 +84,6 @@ export const projects: Project[] = [
     title: "Aaila Foods",
     synopsis: "A look at the Aaila Foods website refresh project, covering the brand's background and my role in developing the blog's front-end and back-end within a WordPress and WooCommerce stack.",
     thumbnail: aailaFoodsLogo,
-    date: "2025-11-15",
     tags: ["Wordpress", "JavaScript"],
     content: aailaFoods,
     bg: "bg-slate-100",
@@ -102,7 +93,6 @@ export const projects: Project[] = [
     title: "Pace Centre",
     synopsis: "A full redesign and rebuild of the website for The Pace Centre, a Buckinghamshire charity supporting children with neurodisabilities,",
     thumbnail: paceCentreLogo,
-    date: "2025-11-15",
     tags: ["Wordpress", "JavaScript"],
     content: paceCentre,
     bg: "bg-slate-100",
