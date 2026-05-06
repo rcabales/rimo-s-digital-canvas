@@ -58,13 +58,13 @@ const ProjectPage = () => {
           <h1 className="text-4xl md:text-5xl tracking-tighter mb-4">{project.title}</h1>
           <p className="text-muted-foreground mb-2">{project.synopsis}</p>
 
-          <div className="aspect-[16/9] rounded-2xl overflow-hidden border border-border mb-10 bg-accent">
+          <div className="aspect-[16/9] rounded-2xl overflow-hidden border border-border mb-10 p-4 bg-accent">
             <img
               src={project.thumbnail}
               alt={project.title}
               width={1280}
               height={800}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
 

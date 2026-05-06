@@ -77,7 +77,7 @@ export const projects: Project[] = [
     thumbnail: busterAndPunchLogo,
     tags: ["Wordpress", "WooCommerce", "JavaScript"],
     content: busterAndPunch,
-    bg: "bg-slate-700",
+    bg: "bg-slate-100",
   },
   {
     slug: "aaila-foods",
