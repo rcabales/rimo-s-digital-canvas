@@ -44,7 +44,7 @@ const AboutSection = () => {
               </h2>
               <div className="space-y-5 text-muted-foreground leading-relaxed">
                 <p>
-                  I'm a Full Stack Web Developer with over 12 years of experience
+                  I'm a Full Stack Web Developer with experience
                   across fast-paced digital agencies and focused, single-product companies.
                   My work sits at the intersection of robust back-end architecture and
                   polished front-end experiences.

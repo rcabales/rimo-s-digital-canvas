@@ -34,6 +34,13 @@ const ContactSection = () => {
     setSubmitting(true);
     const { name, email, message } = result.data;
     const { error } = await supabase.from("contact_submissions").insert([{ name, email, message }]);
+
+    if (!error) {
+      await supabase.functions.invoke("send-contact-email", {
+        body: { name, email, message },
+      });
+    }
+
     setSubmitting(false);
 
     if (error) {
@@ -133,7 +140,7 @@ const ContactSection = () => {
             transition={{ duration: 0.6, delay: 0.2, ease }}
             className="flex flex-col justify-center"
           >
-            <p className="text-sm text-muted-foreground mb-6">Or find me elsewhere</p>
+            <p className="text-sm text-muted-foreground mb-6">Find me elsewhere</p>
             <div className="space-y-4">
               <a
                 href="https://github.com"

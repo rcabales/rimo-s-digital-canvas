@@ -14,17 +14,12 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease }}
           className="max-w-4xl"
         >
-          <p className="label-meta mb-6">Full Stack Developer · 12+ Years</p>
+          {/* <p className="label-meta mb-6">Full Stack Developer · 12+ Years</p> */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tighter leading-[0.95] text-foreground mb-8">
-            Building resilient
-            <br />
-            web architecture
-            <br />
-            <span className="text-primary">for twelve years.</span>
+            Full Stack Developer. 10+ years. <span className="text-primary">Front to back</span>.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-10">
-            Full Stack Developer specializing in WordPress, React, and the space between
-            design and engineering. Currently based globally, working remotely.
+            I've spent more than ten years building websites and web apps that hold up under pressure. I work across the full stack — front end and back end — with WordPress at the core of what I do. Remote-first, working with teams around the world.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
