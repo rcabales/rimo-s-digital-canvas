@@ -6,7 +6,7 @@ const SiteFooter = () => {
           © {new Date().getFullYear()} Rimo Cabales. All rights reserved.
         </p>
         <p className="font-mono text-xs text-muted-foreground">
-          Built with React + Tailwind
+          Built with React + Tailwind 
         </p>
       </div>
     </footer>
