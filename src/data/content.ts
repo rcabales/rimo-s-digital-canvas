@@ -108,7 +108,7 @@ export const blogPosts: BlogPost[] = [
     slug: "5-signs-your-website-drives-away-customers",
     title: "5 Signs Your Website Is Driving Customers Away",
     synopsis: "A practical and painless checklist to help business owners spot the hidden website problems that could be quietly costing them customers.",
-    thumbnail: "https://images.unsplash.com/photo-1659353587228-5dbbebb5d98",
+    thumbnail: "https://images.unsplash.com/photo-1659353587228-5dbbebb5d98f",
     date: "2026-04-01",
     readTime: "4 min",
     content: fiveSignsYourWebsiteDrivesAwayCustomers,
