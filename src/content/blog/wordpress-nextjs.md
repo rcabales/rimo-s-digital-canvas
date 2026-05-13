@@ -123,7 +123,7 @@ Headless WordPress with Next.js is how I build websites for clients who want the
 
 Custom post types are the bit that makes it sing for businesses with real, structured content — because your data deserves better than one giant drawer full of mystery keys.
 
-If any of this sounds like what your website needs, [get in touch](#) — I'd love to talk through what the right setup looks like for you specifically.
+If any of this sounds like what your website needs, [get in touch](/#contact) — I'd love to talk through what the right setup looks like for you specifically.
 
 ---
 

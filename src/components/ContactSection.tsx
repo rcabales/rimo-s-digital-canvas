@@ -142,7 +142,7 @@ const ContactSection = () => {
           >
             <p className="text-sm text-muted-foreground mb-6">Find me elsewhere</p>
             <div className="space-y-4">
-              <a
+              {/* <a
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -150,9 +150,9 @@ const ContactSection = () => {
               >
                 <Github size={20} />
                 <span className="text-sm">GitHub</span>
-              </a>
+              </a> */}
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/rimocabales/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-foreground hover:text-primary transition-colors group"
@@ -161,11 +161,11 @@ const ContactSection = () => {
                 <span className="text-sm">LinkedIn</span>
               </a>
               <a
-                href="mailto:hello@rimocabales.dev"
+                href="mailto:rimo.cabales@protonmail.com"
                 className="flex items-center gap-3 text-foreground hover:text-primary transition-colors group"
               >
                 <Mail size={20} />
-                <span className="text-sm">hello@rimocabales.dev</span>
+                <span className="text-sm">rimo.cabales@protonmail.com</span>
               </a>
             </div>
           </motion.div>

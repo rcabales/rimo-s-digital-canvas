@@ -10,6 +10,8 @@ import dezeenLogo from "@/assets/content/projects/dezeen/dezeen.svg";
 
 import busterAndPunchLogo from "@/assets/content/projects/busterandpunch/busterandpunch.svg";
 
+import wpjsthumbnail from "@/assets/content/blog/wp_js.png";
+
 
 // Project markdown content
 import bsiGroup from "@/content/projects/bsigroup.md?raw";
@@ -21,6 +23,8 @@ import paceCentre from "@/content/projects/pacecentre.md?raw";
 
 // Blog markdown content
 import contentWordpressNextjs from "@/content/blog/wordpress-nextjs.md?raw";
+import whyCustomWebsitesStillMatter from "@/content/blog/why-custom-website.md?raw";
+import fiveSignsYourWebsiteDrivesAwayCustomers from "@/content/blog/5-signs-bad-site.md?raw";
 
 export interface Project {
   slug: string;
@@ -101,13 +105,31 @@ export const projects: Project[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "5-signs-your-website-drives-away-customers",
+    title: "5 Signs Your Website Is Driving Customers Away",
+    synopsis: "A practical and painless checklist to help business owners spot the hidden website problems that could be quietly costing them customers.",
+    thumbnail: "https://images.unsplash.com/photo-1659353587228-5dbbebb5d98",
+    date: "2026-04-01",
+    readTime: "4 min",
+    content: fiveSignsYourWebsiteDrivesAwayCustomers,
+  },
+  {
     slug: "wordpress-nextjs",
     title: "WordPress + Next.js: How I Build Websites That Are Fast, Flexible, and Easy for You to Manage",
     synopsis: "How WordPress and Next.js work together to give your business a faster, better-looking website — without the headaches.",
-    thumbnail: hassanNurLogo,
-    date: "2025-12-01",
-    readTime: "8 min",
+    thumbnail: wpjsthumbnail,
+    date: "2026-03-01",
+    readTime: "5 min",
     content: contentWordpressNextjs,
+  },
+  {
+    slug: "why-custom-websites-still-matter",
+    title: "Why Custom Websites Still Matter in 2023",
+    synopsis: "In a world of drag-and-drop builders, why should you consider a custom-built website for your business?",
+    thumbnail: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea",
+    date: "2026-02-01",
+    readTime: "5 min",
+    content: whyCustomWebsitesStillMatter,
   },
 ];
 
