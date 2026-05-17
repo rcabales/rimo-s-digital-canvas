@@ -124,8 +124,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "why-custom-websites-still-matter",
-    title: "Why Custom Websites Still Matter in 2023",
-    synopsis: "In a world of drag-and-drop builders, why should you consider a custom-built website for your business?",
+    title: "Why Custom Websites Still Matter in 2026",
+    synopsis: "In a world where AI can build you a website in 45 seconds, why would you pay a human to build one?",
     thumbnail: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea",
     date: "2026-02-01",
     readTime: "5 min",
