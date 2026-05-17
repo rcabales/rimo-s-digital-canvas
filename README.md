@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Rimo Cabale portfolio site
 
 TODO: Document your project here
