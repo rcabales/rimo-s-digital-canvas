@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { Github, Linkedin, Mail, Send, FileCode } from "lucide-react";
 import { z } from "zod";
 import { brandEase } from "@/lib/motion";
 import { supabase } from "@/integrations/supabase/client";
@@ -151,6 +151,15 @@ const ContactSection = () => {
                 <Github size={20} />
                 <span className="text-sm">GitHub</span>
               </a> */}
+              <a
+                href="/rimo_cabales_cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-foreground hover:text-primary transition-colors group"
+              >
+                <FileCode size={20} />
+                <span className="text-sm">CV</span>
+              </a>
               <a
                 href="https://www.linkedin.com/in/rimocabales/"
                 target="_blank"
