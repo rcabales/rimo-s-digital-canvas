@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const SiteFooter = () => {
   return (
     <footer className="border-t border-border py-10">
@@ -6,7 +8,9 @@ const SiteFooter = () => {
           © {new Date().getFullYear()} Rimo Cabales. All rights reserved.
         </p>
         <p className="font-mono text-xs text-muted-foreground">
-          Built with React + Tailwind 
+          <Link to="/privacy-policy" className="hover:text-primary/90">
+            Privacy Policy
+          </Link>
         </p>
       </div>
     </footer>

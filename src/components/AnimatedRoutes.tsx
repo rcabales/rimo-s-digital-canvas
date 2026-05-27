@@ -4,6 +4,7 @@ import { brandEase } from "@/lib/motion";
 import Index from "@/pages/Index";
 import ProjectPage from "@/pages/ProjectPage";
 import BlogPostPage from "@/pages/BlogPostPage";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import NotFound from "@/pages/NotFound";
 
 const PageTransition = ({ children }: { children: React.ReactNode }) => (
@@ -26,6 +27,7 @@ const AnimatedRoutes = () => {
         <Route path="/" element={<PageTransition><Index /></PageTransition>} />
         <Route path="/projects/:slug" element={<PageTransition><ProjectPage /></PageTransition>} />
         <Route path="/blog/:slug" element={<PageTransition><BlogPostPage /></PageTransition>} />
+        <Route path="/privacy-policy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
         <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
       </Routes>
     </AnimatePresence>
