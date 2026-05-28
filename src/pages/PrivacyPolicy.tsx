@@ -44,7 +44,7 @@ const PrivacyPolicy = () => {
           </Link>
 
           {/* Eyebrow + title */}
-          <p className="font-mono text-xs text-muted-foreground bg-accent py-1 rounded-md mb-4">
+          <p className="font-mono text-xs text-muted-foreground py-1 rounded-md mb-4">
             Legal
           </p>
           <h1 className="text-4xl md:text-5xl tracking-tighter mb-4">Privacy Policy</h1>
