@@ -50,7 +50,7 @@ const AboutSection = () => {
                   polished front-end experiences.
                 </p>
                 <p>
-                  I thrive in cross-functional teams—collaborating closely with designers,
+                  I thrive in cross-functional teams - collaborating closely with designers,
                   product managers, QA engineers, and UX researchers to ship work that's
                   both technically sound and genuinely useful.
                 </p>
