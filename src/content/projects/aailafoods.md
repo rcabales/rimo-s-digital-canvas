@@ -1,13 +1,17 @@
-## The Client
+## The Brief
 
-Aaila Foods is a UK-based company specializing in the production of authentic Indian ready meals. Their products are available in major supermarkets across the UK, as well as for online purchase through their website.
+Aaila Foods is a UK-based producer of authentic Indian ready meals, stocked in major supermarkets nationwide with a parallel direct-to-consumer channel. The brief was straightforward: deliver an initial web presence from scratch, built to grow.
 
 ![Aaila Foods screenshot](/projects/aailafoods/aailafoods1.png)
 
-## The Project & What Did I Do?
+## My Approach
 
-This project marked the client's initial website launch to establish an online presence, starting with a simple foundation. There are plans in place to continue building upon and expanding the site over time.
+With no existing codebase to inherit, I had full architectural control from day one. I chose WordPress as the foundation — the right call for a small food brand that needed content ownership without developer dependency. The priority was a clean, extensible base rather than feature overload; launching fast with solid fundamentals beats launching late with everything.
 
 ![Aaila Foods screenshot](/projects/aailafoods/aailafoods2.png)
 
-I served as the sole developer on this project, delivering the initial site launch using a custom WordPress instance.
+I was the sole developer throughout, handling everything from environment setup to go-live.
+
+## What I'd Do Differently
+
+The site was scoped conservatively by design, which was the right call at the time. In retrospect, I'd have pushed harder to establish a proper content model and component library upfront — even at launch scale — to make the planned future expansion less costly to implement.
