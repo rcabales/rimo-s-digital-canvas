@@ -19,7 +19,7 @@ const HeroSection = () => {
             Full Stack Developer. 10+ years. <span className="text-primary">Front to back</span>.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-10">
-            I've spent more than ten years building websites and web apps that hold up under pressure. I work across the full stack — front end and back end — with WordPress at the core of what I do. Remote-first, working with teams around the world.
+            I've spent more than ten years building websites and web apps that hold up under pressure. I work across the full stack - front end and back end - with WordPress at the core of what I do. Remote-first, working with teams around the world.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
