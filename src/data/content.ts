@@ -25,6 +25,7 @@ import paceCentre from "@/content/projects/pacecentre.md?raw";
 import contentWordpressNextjs from "@/content/blog/wordpress-nextjs.md?raw";
 import whyCustomWebsitesStillMatter from "@/content/blog/why-custom-website.md?raw";
 import fiveSignsYourWebsiteDrivesAwayCustomers from "@/content/blog/5-signs-bad-site.md?raw";
+import whatToAskADeveloper from "@/content/blog/what-to-ask-a-developer.md?raw";
 
 export interface Project {
   slug: string;
@@ -105,6 +106,14 @@ export const projects: Project[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "what-to-ask-a-developer",
+    title: "What to Ask a Developer Before Hiring Them",
+    synopsis: "A practical filter for hiring web developers - seven questions that separate genuine expertise from polished salesmanship, before you sign anything.",
+    thumbnail: "https://images.unsplash.com/photo-1630672790237-38eeb57cb60b",
+    date: "2026-06-01",
+    readTime: "8 min",
+    content: whatToAskADeveloper,
+  },{
     slug: "5-signs-your-website-drives-away-customers",
     title: "5 Signs Your Website Is Driving Customers Away",
     synopsis: "A practical and painless checklist to help business owners spot the hidden website problems that could be quietly costing them customers",
